@@ -78,7 +78,7 @@ export default () => (
 );
 ```
 
-# Async components may fail to load due to network errors
+#### Async components may fail to load due to network errors
 
 You can handle failure by giving a third parameter like so:
 
