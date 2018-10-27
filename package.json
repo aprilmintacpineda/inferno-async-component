@@ -1,0 +1,43 @@
+{
+  "name": "inferno-async-component",
+  "version": "1.0.0",
+  "description": "Bridge between inferno-js and webpack's dynamic import. With this you can asynchronously load your components.",
+  "main": "lib/index.js",
+  "dependencies": {
+    "inferno": "^6.0.3",
+    "inferno-create-element": "^6.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-jsx": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-inferno": "^6.0.2",
+    "babel-preset-minify": "^0.5.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-inferno": "^7.11.0",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "reinstallNodeModules": "rm -rf node_modules package-lock.json && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src/index.js --fix",
+    "prettier": "prettier \"src/**/*.js\" --write",
+    "lint": "npm run prettier && npm run eslint",
+    "build": "npm run lint && rm -rf lib && mkdir lib && node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gh_personal:aprilmintacpineda/inferno-async-component.git"
+  },
+  "keywords": [
+    "inferno",
+    "async-components",
+    "code-splitting",
+    "code-split-component"
+  ],
+  "author": "April Mintac Pineda",
+  "license": "MIT"
+}
