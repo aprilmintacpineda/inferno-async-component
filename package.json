@@ -40,9 +40,12 @@
   },
   "keywords": [
     "inferno",
+    "inferno-js",
     "async-components",
     "code-splitting",
-    "code-split-component"
+    "code-split-component",
+    "webpack-dynamic-imports",
+    "dynamic-imports"
   ],
   "author": "April Mintac Pineda",
   "license": "MIT"
