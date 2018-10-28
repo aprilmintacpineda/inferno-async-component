@@ -3,6 +3,12 @@
   "version": "1.1.0",
   "description": "Bridge between inferno-js and webpack's dynamic import. With this you can asynchronously load your components.",
   "main": "lib/index.js",
+  "files": [
+    "lib/**/*",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "dependencies": {
     "inferno": "^6.0.3",
     "inferno-create-element": "^6.0.3"
