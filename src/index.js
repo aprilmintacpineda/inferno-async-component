@@ -3,7 +3,7 @@
 import { Component } from 'inferno';
 import { createElement } from 'inferno-create-element';
 
-export default (loader, renderWhileLoading, failedCallback) => {
+export default (loader, PlaceholderComponent, failedCallback) => {
   let asyncComponent = null;
 
   function LoadAsyncComponent (props) {
@@ -22,6 +22,10 @@ export default (loader, renderWhileLoading, failedCallback) => {
           });
         })
         .catch(err => {
+          if (this.props.failedCallback) {
+            this.props.failedCallback(err);
+          }
+
           if (failedCallback) {
             failedCallback(err);
           }
@@ -62,8 +66,8 @@ export default (loader, renderWhileLoading, failedCallback) => {
 
     this.render = () => {
       if (!asyncComponent) {
-        if (renderWhileLoading) {
-          return <renderWhileLoading />;
+        if (PlaceholderComponent) {
+          return <PlaceholderComponent />;
         }
 
         return null;
