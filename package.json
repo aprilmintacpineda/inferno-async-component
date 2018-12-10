@@ -10,8 +10,8 @@
     "package.json"
   ],
   "peerDependencies": {
-    "inferno": "~6",
-    "inferno-create-element": "~6"
+    "inferno": "^7.0.2",
+    "inferno-create-element": "^7.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
